@@ -1,0 +1,79 @@
+.navbar {
+    background: #48cfcb;
+    height: auto; /* Allow height to adjust */
+    width: 100%; /* Full width */
+    max-width: 75rem; /* Maintain max width for larger screens */
+    padding: 1rem 2rem;
+    display: flex;
+    border-radius: 50px;
+    margin: 30px auto; /* Center the navbar */
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.desktopMenuList {
+    display: flex; /* Use flex for the menu */
+    align-items: center;
+}
+
+.desktopMenuListItem {
+    color: black;
+    margin: 0 1rem; /* Horizontal spacing */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.desktopMenuListItem:hover {
+    color: white;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid;
+}
+
+.active {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid white;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem; /* Adjust padding */
+        align-items: center; /* Center items */
+    }
+
+    .desktopMenuList {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width for better touch targets */
+        align-items: stretch; /* Stretch items to full width */
+        margin-top: 1rem; /* Space between logo and menu */
+    }
+
+    .desktopMenuListItem {
+        margin: 0.5rem 0; /* Adjust margin for vertical layout */
+        font-size: 1rem; /* Adjust font size */
+        text-align: center; /* Center text */
+        padding: 1rem; /* Increase padding for touch-friendly buttons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 2.5rem; /* Smaller logo */
+        height: 2.5rem; /* Smaller logo */
+    }
+
+    .desktopMenuListItem {
+        font-size: 0.9rem; /* Smaller font size */
+        margin: 0.5rem 0; /* Adjust margin for smaller screens */
+    }
+}
